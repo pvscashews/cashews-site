@@ -8,7 +8,7 @@
     console.log("Selected:", selectedValues);
 }
 
-const scripturl = "https://script.google.com/macros/s/AKfycbxb_PBtGWf6rcFIcwF2XIQjca08mTeQcNVQ-flOaB8wHOKwwvjD75F0x6rHTRZSel9lzw/exec";
+const scripturl = "https://script.google.com/macros/s/AKfycbwXXCxaZCB5Io0xqWdIWiCFaOkCjLZYROizgWJzfuyIbUqta0n4LXYsh4Q2V7Zdm4vCOQ/exec";
 
 	
 $(document).ready(function () {
