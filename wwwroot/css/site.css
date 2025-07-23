@@ -1,0 +1,290 @@
+﻿
+body {
+    background-color: #ffffff;
+}
+
+.temp {
+    display: none;
+}
+
+.body-content {
+    /*padding-left: 15px;*/
+    /*padding-right: 15px;*/
+}
+
+.headerlink {
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.topheaderlink {
+    color: #d0bee1;
+    font-size: 12px;
+}
+
+.cart:hover {
+    background: #802cc4;
+}
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+
+a {
+    color: #459fed;
+    text-decoration: none;
+}
+
+.signupstyle {
+    font-family: HelveticaNeueW01-Thin,HelveticaNeueW02-Thin,HelveticaNeueW10-35Thin,sans-serif;
+    font-size: 56px;
+    color: #590B98;
+}
+
+.already-user {
+    font-weight: 300;
+    font-size: 20px;
+    font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+    color: #20303c;
+}
+
+.signin-section {
+    font-family: HelveticaNeueW01-Thin,HelveticaNeueW02-Thin,HelveticaNeueW10-35Thin,sans-serif;
+    font-size: 16px;
+    width: 360px;
+    margin: 15px 0;
+    font-size: 20px;
+    height: 31px;
+    display: inline-block;
+    padding: 2px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.containerstyle {
+    position: relative;
+}
+
+.labelstyle {
+    font-size: 20px;
+    font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+    padding-left: 9px;
+    margin-bottom: 0;
+    left: 0;
+    right: auto;
+    -webkit-transform-origin: left top;
+    -ms-transform-origin: left top;
+    transform-origin: left top;
+    bottom: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    order: 1;
+    pointer-events: none;
+    -webkit-transform: translate3d(0,28px,0) scale(1);
+    transform: translate3d(0,28px,0) scale(1);
+    transition: -webkit-transform .4s cubic-bezier(.25,.8,.25,1);
+    transition: transform .4s cubic-bezier(.25,.8,.25,1);
+    max-width: 100%;
+    z-index: 1;
+    position: absolute;
+    color: #46156d;
+}
+
+.ng-pristine {
+    font-size: 20px;
+    font-family: HelveticaNeueW01-45Ligh,HelveticaNeueW02-45Ligh,HelveticaNeueW10-45Ligh,sans-serif;
+    padding-bottom: 6px;
+    padding-left: 5px;
+    transition: border-bottom .3s,border-color .3s,border-width .3s,border .3s ease-in-out;
+    float: left;
+    -ms-flex-order: 2;
+    order: 2;
+    display: block;
+    margin-top: 10px;
+    border-width: 0 0 1px;
+    border-bottom: solid 0.9px #e1e1e1;
+    line-height: 30px;
+    border-style: solid;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1000px #fff inset !important;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea:focus, input:focus {
+    outline: none;
+}
+
+.md-input-focused {
+    padding-bottom: 11px;
+}
+
+    .md-input-focused .labelstyle {
+        color: #46156d !important;
+        -webkit-transform: translate3d(0,6px,0) scale(.75);
+        transform: translate3d(0,6px,0) scale(.75);
+        transition: -webkit-transform cubic-bezier(.25,.8,.25,1) .4s,width cubic-bezier(.25,.8,.25,1) .4s;
+        transition: transform cubic-bezier(.25,.8,.25,1) .4s,width cubic-bezier(.25,.8,.25,1) .4s letter-spacing: 1px;
+    }
+
+    .md-input-focused .focus-line {
+        border-bottom: solid 2px #802cc4;
+        width: 99.6%;
+        height: 2px;
+        position: absolute;
+        top: 48px;
+        left: 1px;
+        transition: width .3s;
+    }
+
+.login-link {
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+md-input-container {
+    display: inline-block;
+    position: relative;
+    padding: 2px;
+    margin: 18px 0;
+    vertical-align: middle;
+    font-size: 20px;
+    height: 33px;
+    width: 100%;
+}
+
+.login-button {
+    width: 100%;
+    height: 50px;
+    padding-top: 25px;
+    font-family: HelveticaNeueW01-Thin,HelveticaNeueW02-Thin,HelveticaNeueW10-35Thin,sans-serif;
+    font-size: 16px;
+    min-width: 168px;
+}
+
+.button-spinner {
+    width: 105px;
+    height: 43px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-width: 105px;
+}
+
+
+.container.desktop .wix-button {
+    min-width: 105px;
+    font-size: 16px;
+    height: 43px;
+    padding-top: 8px;
+    padding-bottom: 14px;
+    line-height: 1.5;
+    background: #590B98;
+}
+
+.wix-button, .wix-button-danger, .wix-button-emphasize, .wix-button-invert, .wix-button-invert-light, .wix-button-market, .wix-button-premium, .wix-button-transparent {
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 999px;
+    border: none;
+    color: #fff;
+    font-family: HelveticaNeueW01-55Roma,HelveticaNeueW02-55Roma,HelveticaNeueW10-55Roma,sans-serif;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0 24px;
+    cursor: pointer;
+    outline: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+    .wix-button.is-button-outline {
+        background-color: #fff;
+        color: #590B98;
+        box-shadow: inset 0 0 0 1px #590B98;
+    }
+
+    .wix-button:hover {
+        background-color: #7024ad;
+        border-color: #7024ad;
+        color: #ffffff;
+    }
+
+    .wix-button:active:hover {
+        background-color: #7024ad !important;
+    }
+
+
+.sliderTransition {
+    transition: -webkit-transform 1000ms ease;
+}
+
+.links {
+    display: table;
+    vertical-align: middle;
+}
+
+.productlogo {
+    float: left;
+    margin-top: 8px;
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.logo {
+    color: #f2f0f4 !important;
+}
+
+@media screen and (max-width: 500px) {
+    .visibledevice {
+        display: none;
+    }
+
+    .navbar-collapse {
+        border-top: 1px solid white !important;
+        float: none !important;
+        margin-right: 0px !important;
+    }
+
+    .links {
+        margin-left: 10% !important;
+    }
+
+    .productlogo {
+        margin-left: 25px !important;
+        font-size: 10px;
+    }
+
+    .logo {
+        font-size: 28px !important;
+    }
+}

@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "HelveticaNeueW01-Thin";
+    src: url("../Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff");
+}
+@font-face {
+    font-family: "HelveticaNeueW02-Thin";
+    src: url("../Fonts/775a65da-14aa-4634-be95-6724c05fd522.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HelveticaNeueW10-35Thin";
+    src: url("../Fonts/c881c21b-4148-4a11-a65d-f35e42999bc8.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HelveticaNeueW01-45Ligh";
+    src: url("../Fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HelveticaNeueW02-45Ligh";
+    src: url("../Fonts/9a2e4855-380f-477f-950e-d98e8db54eac.woff") format("woff");
+}
+
+@font-face {
+    font-family: "HelveticaNeueW10-45Ligh";
+    src: url("../Fonts/835e7b4f-b524-4374-b57b-9a8fc555fd4e.woff") format("woff");
+}
