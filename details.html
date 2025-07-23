@@ -1,0 +1,287 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="cashews, cashew nuts, online cashews, cashew manufacturers, cashew dealers, cashew exporters" />
+    <meta name="google-site-verification" content="7KSSTtLdzgTeZT13fFdNfhW_ZhwFx5gfXp8-u1maEbM" />
+    <title>Details</title>
+    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.css?v=2" />
+    <link rel="stylesheet" href="wwwroot/css/site.css?v=2" />
+    <link href="wwwroot/css/fontFace.css" rel="stylesheet" />
+    <script src="wwwroot/js/jquery-3.2.1.js"></script>
+    <script src="wwwroot/js/global.js"></script>
+    <link rel="icon" href="wwwroot/images/fav.png" type="image/x-icon" />
+    <script src="wwwroot/js/details.js"></script>
+    <style type="text/css">
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .container-details {
+            background-color: #ffffff;
+        }
+
+        .desc {
+            height: 40px;
+        }
+
+        .description {
+            color: #555555;
+            font-size: 22px;
+        }
+
+        .oldprice {
+            height: 35px;
+            font-size: 13px;
+            color: #aeaeae;
+        }
+
+        .picture {
+            width: 350px;
+            height: 350px;
+            cursor: crosshair;
+        }
+
+        .mrp {
+            text-decoration: line-through;
+        }
+
+        .quantity {
+            font-size: 14px;
+            color: #727272;
+        }
+
+        .newprice {
+            color: #6811AF;
+            font-size: 25px;
+        }
+
+        .detailsblock {
+            padding-left: 25px;
+        }
+
+        #zoomimage {
+            width: 400px;
+            height: 400px;
+            transform: scale(2);
+            display: none;
+        }
+
+        #zoomimageholder {
+            margin-left: 400px;
+            position: absolute;
+            width: 350px;
+            overflow: hidden;
+            height: 350px;
+            margin-top: -350px;
+            float:right;
+        }
+
+        #detailsrow {
+            display: none;
+        }
+
+        #divproductimg {
+            width: 350px;
+            margin-left: 35px;
+            border: 0px solid black;
+            float: left;
+            height: 350px;
+        }
+
+        #div-container {
+            display: block;
+        }
+
+        #div-container-mobile {
+            display: none;
+        }
+
+        @media screen and (max-width: 500px) {
+            #detailsrow {
+                display: block !important;
+            }
+
+            #detailstd {
+                display: none !important;
+            }
+
+            #div-container {
+                width: 50% !important;
+            }
+
+            #zoomimageholder {
+                display: none;
+            }
+
+            .picture {
+                width: 325px !important;
+                height: 325px !important;
+                margin-left: 0px !important;
+                margin-top: 25px !important;
+            }
+
+            #divproductimg {
+                width: 325px !important;
+                margin-left: 5px !important;
+                height: 325px !important;
+            }
+
+            .detailsblock {
+                width: 325px !important;
+            }
+
+            .quantity {
+                margin-top: 25px !important;
+            }
+
+            #div-container {
+                display: none !important;
+            }
+
+            #div-container-mobile {
+                display: block !important;
+            }
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#productimg").mouseenter(function () {
+                $("#zoomimage").fadeIn();
+            }).mouseleave(function () {
+                $("#zoomimage").fadeOut();
+            });
+            $('#productimg').mousemove(function (e) {
+                var xPos = e.pageX - $(this).offset().left;
+                var yPos = e.pageY - $(this).offset().top;
+                $("#zoomimage").css("transform-origin", xPos + "px " + yPos + "px");
+            });
+
+            $("#productimg-mob").mouseenter(function () {
+                $("#zoomimage-mob").fadeIn();
+            }).mouseleave(function () {
+                $("#zoomimage-mob").fadeOut();
+            });
+            $('#productimg-mob').mousemove(function (e) {
+                var xPos = e.pageX - $(this).offset().left;
+                var yPos = e.pageY - $(this).offset().top;
+                $("#zoomimage-mob").css("transform-origin", xPos + "px " + yPos + "px");
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="topheader">
+            <div style="float:right; padding-top:5px;vertical-align:middle; visibility:collapse; margin-right:15px; height:100%;">
+                <a class="headerlink topheaderlink" href="/Account/SignIn">Download App</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="productlogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAtUExURf///////////////////////////////////////////////////////////6DSMAUAAAAPdFJOU6i7AozP/j4QVuB19h1mKUtpDdUAAAEnSURBVCgVY3ANjfZSQgIMoUBghCyQe/eWaByyAJBdHYwmoBiCJqAbegghwgBk6oReQhVQcp0oCAUCSSAVSqYguyFgO1ggNdrFxXWKZwiQDAMLaEcqKaU2aYQpKS2NAwsohKaXp16vDSsvn+oEFtCAmRAa2gQWUA/dbMzKbBBgbB2pBBZQAvoGbEZrLFRgacAqU64FwatcJ0EFnsIMWQQV0AzNaV1zKuJgdBFUQDn0EsiMp8BwgBiqETpB1IEl0HUPTEBpK8QQI7iA6BYXIHAuggtchQcrxAyl0yGHgMEAAlAB3dCNoCASgAsoLYWYmgRToaRnwMDAIMCMUKG1+5JSZgDCDKWjoduVXEObECqehoYrTUUWUADG+G1QDEKtVVJ6B4ywJKAAAAQAd3O4FvzpAAAAAElFTkSuQmCC">
+                <a class="navbar-brand logo" href="/">Sunthari Cashews</a>
+            </div>
+
+            <div class="navbar-collapse collapse" style="float:right; margin-right:15px; height:100%;">
+                <div class="links">
+                    <a class="headerlink" href="index.html">
+                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
+                            <center>
+                                <span style="margin-left:10px;">Home</span>
+                            </center>
+                        </div>
+                    </a>
+                    <a class="headerlink" href="contact.html">
+                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
+                            <center>
+                                <span style="margin-left:10px;">Contact</span>
+                            </center>
+                        </div>
+                    </a>
+                    <a class="headerlink" href="about.html">
+                        <div class="cart headertext" style="display:table-cell;width:100px;vertical-align:middle;height:50px;">
+                            <center>
+                                <span style="margin-left:10px;">About Us</span>
+                            </center>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        <div id="div-container-mobile" style="margin-top:60px;">
+            <center>
+                <div class="divproductimg">
+                    <img id="productimg-mob" class="picture" src="wwwroot/images/products/W240.jpg" />
+                </div>
+                <div id="zoomimageholder">
+                    <img id="zoomimage-mob" src="wwwroot/images/products/W240.jpg" />
+                </div>
+            </center>
+            <div class="detailsblock">
+                <div class="desc">
+                    <h1 class="description"> Fresh organic whole cashews </h1>
+                </div>
+                <div class="quantity">
+                    1 Kg, W240
+                </div>
+                <hr />
+                <div class="oldprice">
+                    MRP <span class="mrp">Rs. 820</span> (Inclusive of all taxes)
+                </div>
+                <div class="newprice">
+                    Rs. 570
+                </div>
+            </div>
+        </div>
+        <div id="div-container" style="margin-top:60px;">
+            <center>
+                <table class="container-details" style="width:90%; height:400px;">
+                    <tr>
+                        <td style="width:40%; padding:20px;">
+                            <center>
+                                <div class="divproductimg">
+                                    <img id="productimg" class="picture" src="wwwroot/images/products/W240.jpg" />
+                                </div>
+                                <div id="zoomimageholder">
+                                    <img id="zoomimage" src="wwwroot/images/products/W240.jpg" />
+                                </div>
+                            </center>
+                        </td>
+
+                        <td valign="top" style="border-left:2px solid #f2f2f2;">
+                            <div class="detailsblock">
+                                <div class="desc">
+                                    <h1 class="description"> Fresh organic whole cashews </h1>
+                                </div>
+                                <div class="quantity">
+                                    1 Kg, W240
+                                </div>
+                                <hr />
+                                <div class="oldprice">
+                                    MRP <span class="mrp">Rs. 820</span> (Inclusive of all taxes)
+                                </div>
+                                <div class="newprice">
+                                    Rs. 570
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+    </div>
+</body>
+</html>
