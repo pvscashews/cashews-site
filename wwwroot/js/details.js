@@ -1,15 +1,14 @@
 ﻿$(document).ready(function () {
     $('.container').hide();
     var name = $.urlParam('name'); 
-    var db = firebase.firestore();
-    db.collection("Cashews").doc(name).get().then(function (doc) {
-        $('#productimg').attr('src', doc.data().ImageURL);
-        $('#zoomimage').attr('src', doc.data().ImageURL);
-        $('.description').text(doc.data().Description);
-        $('.quantity').text(doc.data().Weight + ' Kg, ' + doc.id);
-        $('.mrp').text('Rs. ' + doc.data().OldPrice);
-        $('.newprice').text('Rs. ' + doc.data().NewPrice);
-    });
+
+    $('#productimg').attr('src', 'https://www.pvscashews.com/wwwroot/images/products/W240.jpg');
+    $('#zoomimage').attr('src', 'https://www.pvscashews.com/wwwroot/images/products/W240.jpg');
+    $('.description').text('Fresh organic whole cashews');
+    $('.quantity').text('1 Kg');
+    $('.mrp').text('Rs. 500');
+    $('.newprice').text('Rs. 400');
+
     $('.container').show();
 });
 
