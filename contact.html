@@ -64,7 +64,7 @@
         
 <meta name="description" content="Find contact information for PVS cashews, Sales enquiries, Cashew bulk orders and more." />
 
-<link href="wwwroot/css/font-awesome.min.css" rel="stylesheet" />
+<!-- <link href="wwwroot/css/font-awesome.min.css" rel="stylesheet" /> -->
 <link href="wwwroot/css/contact.css?v=1" rel="stylesheet" />
 <script src="wwwroot/js/contact.js"></script>
 <!-- <script async defer -->
@@ -89,44 +89,35 @@
                         </li>
                         <li>
                             <label>Select the catogories you want <span class="required">*</span><span id="val_category" class="validation"> (Select one category)</span></label>
-                            <ul id="double">
-                                    <li>
-                                        <input name="Catogories[0].Name" type="hidden" id="Catogories_0__Name" value="W180" />
-                                        <input name="Catogories[0].Value" type="hidden" id="Catogories_0__Value" value="W180" />
-                                        <input id="Catogories[0].Value" class="checkbox-custom" type="checkbox" name="Catogories[0].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[0].Value" class="checkbox-custom-label">W180</label>
-                                    </li>
-                                    <li>
-                                        <input name="Catogories[1].Name" type="hidden" id="Catogories_1__Name" value="W240" />
-                                        <input name="Catogories[1].Value" type="hidden" id="Catogories_1__Value" value="W240" />
-                                        <input id="Catogories[1].Value" class="checkbox-custom" type="checkbox" name="Catogories[1].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[1].Value" class="checkbox-custom-label">W240</label>
-                                    </li>
-                                    <li>
-                                        <input name="Catogories[2].Name" type="hidden" id="Catogories_2__Name" value="W320" />
-                                        <input name="Catogories[2].Value" type="hidden" id="Catogories_2__Value" value="W320" />
-                                        <input id="Catogories[2].Value" class="checkbox-custom" type="checkbox" name="Catogories[2].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[2].Value" class="checkbox-custom-label">W320</label>
-                                    </li>
-                                    <li>
-                                        <input name="Catogories[3].Name" type="hidden" id="Catogories_3__Name" value="SW" />
-                                        <input name="Catogories[3].Value" type="hidden" id="Catogories_3__Value" value="SW" />
-                                        <input id="Catogories[3].Value" class="checkbox-custom" type="checkbox" name="Catogories[3].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[3].Value" class="checkbox-custom-label">SW</label>
-                                    </li>
-                                    <li>
-                                        <input name="Catogories[4].Name" type="hidden" id="Catogories_4__Name" value="LW" />
-                                        <input name="Catogories[4].Value" type="hidden" id="Catogories_4__Value" value="LW" />
-                                        <input id="Catogories[4].Value" class="checkbox-custom" type="checkbox" name="Catogories[4].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[4].Value" class="checkbox-custom-label">LW</label>
-                                    </li>
-                                    <li>
-                                        <input name="Catogories[5].Name" type="hidden" id="Catogories_5__Name" value="JW" />
-                                        <input name="Catogories[5].Value" type="hidden" id="Catogories_5__Value" value="JW" />
-                                        <input id="Catogories[5].Value" class="checkbox-custom" type="checkbox" name="Catogories[5].IsChecked" data-val="true" data-val-required="The IsChecked field is required." value="true" />
-                                        <label for="Catogories[5].Value" class="checkbox-custom-label">JW</label>
-                                    </li>
-                            </ul>
+                           <ul id="double">
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W180" id="Cat_W180" />
+        <label for="Cat_W180" class="checkbox-custom-label">W180</label>
+    </li>
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W240" id="Cat_W240" />
+        <label for="Cat_W240" class="checkbox-custom-label">W240</label>
+    </li>
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W320" id="Cat_W320" />
+        <label for="Cat_W320" class="checkbox-custom-label">W320</label>
+    </li>
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="SW" id="Cat_SW" />
+        <label for="Cat_SW" class="checkbox-custom-label">SW</label>
+    </li>
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="LW" id="Cat_LW" />
+        <label for="Cat_LW" class="checkbox-custom-label">LW</label>
+    </li>
+    <li>
+        <input type="checkbox" class="checkbox-custom" name="Catogories" value="JW" id="Cat_JW" />
+        <label for="Cat_JW" class="checkbox-custom-label">JW</label>
+    </li>
+
+    <!-- Store the result -->
+    <input type="hidden" id="SelectedCategories" name="SelectedCategories" />
+</ul>
                         </li>
                         <li>
                             <label>Average Quantity <span class="required">*</span><span id="val_quantity" class="validation"> (Enter Quantity you want)</span></label>
