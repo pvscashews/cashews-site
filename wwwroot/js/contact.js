@@ -40,14 +40,14 @@ $(document).ready(function () {
 
 
 			// Prepare data
-			const formData = {
-			  email: email,
-			  mobile: mobile,
-			  quantity: quantity,
-			  unit: unit,
-			  categories: categories,
-			  message: message
-			};
+			// const formData = {
+			  // email: email,
+			  // mobile: mobile,
+			  // quantity: quantity,
+			  // unit: unit,
+			  // categories: categories,
+			  // message: message
+			// };
 
 			// Send via jQuery AJAX
 			// $.ajax({
@@ -65,21 +65,29 @@ $(document).ready(function () {
 				  // }
 				// });
 				
+				const formData = new URLSearchParams();
+					formData.append("email", email);
+					formData.append("mobile", mobile);
+					formData.append("categories", categories);
+					formData.append("quantity", quantity);
+					formData.append("unit", unit);
+					formData.append("message", message);
+				
 				fetch('https://script.google.com/macros/s/AKfycbylRcpxaplGc2Dlxr1I3ifuGcu80rtmjfApWeozmMSOnvL6WMjBlQyLHghnjKCjaB-KhQ/exec', {
 				method: 'POST',
 				  headers: {
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/x-www-form-urlencoded'
 				  },
-				  body: JSON.stringify(formData)
+				  body: formData
 				})
-				.then(response => response.json())
+				.then(response => response.text())
 				.then(data => {
-				  alert('Form submitted!');
+				  alert("Submitted successfully");
 				})
 				.catch(error => {
-				  console.error('Error:', error);
-				  alert('Submission failed.');
-				});	
+				  console.error("Error:", error);
+				  alert("Submission failed.");
+				});																			
 		  });
     });
 
