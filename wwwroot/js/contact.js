@@ -49,20 +49,36 @@ $(document).ready(function () {
 			};
 
 			// Send via jQuery AJAX
-			$.ajax({
-				  url: scripturl,
-				  method: 'POST',
-				  contentType: 'application/json',
-				  data: JSON.stringify(formData),
-				  success: function (response) {
-					alert('Form submitted successfully!');
-					$('form')[0].reset();
+			// $.ajax({
+				  // url: scripturl,
+				  // method: 'POST',
+				  // contentType: 'application/json',
+				  // data: JSON.stringify(formData),
+				  // success: function (response) {
+					// alert('Form submitted successfully!');
+					// $('form')[0].reset();
+				  // },
+				  // error: function (error) {
+					// console.error('Submission failed:', error.responseText);
+					// alert('Failed to submit form.');
+				  // }
+				// });
+				
+				fetch('https://script.google.com/macros/s/AKfycbylRcpxaplGc2Dlxr1I3ifuGcu80rtmjfApWeozmMSOnvL6WMjBlQyLHghnjKCjaB-KhQ/exec', {
+				method: 'POST',
+				  headers: {
+					'Content-Type': 'application/json'
 				  },
-				  error: function (error) {
-					console.error('Submission failed:', error.responseText);
-					alert('Failed to submit form.');
-				  }
-				});
+				  body: JSON.stringify(formData)
+				})
+				.then(response => response.json())
+				.then(data => {
+				  alert('Form submitted!');
+				})
+				.catch(error => {
+				  console.error('Error:', error);
+				  alert('Submission failed.');
+				});	
 		  });
     });
 
