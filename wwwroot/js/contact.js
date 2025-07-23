@@ -45,14 +45,14 @@ $(document).ready(function () {
     });
 });
 
-function initMap() {
-    var uluru = { lat: 11.702473, lng: 79.548603 };
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: uluru
-    });
-    var marker = new google.maps.Marker({
-        position: uluru,
-        map: map
-    });
-}
+// function initMap() {
+    // var uluru = { lat: 11.702473, lng: 79.548603 };
+    // var map = new google.maps.Map(document.getElementById('map'), {
+        // zoom: 15,
+        // center: uluru
+    // });
+    // var marker = new google.maps.Marker({
+        // position: uluru,
+        // map: map
+    // });
+// }
