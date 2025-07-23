@@ -11,6 +11,7 @@
 const scripturl = "https://script.google.com/macros/s/AKfycbylRcpxaplGc2Dlxr1I3ifuGcu80rtmjfApWeozmMSOnvL6WMjBlQyLHghnjKCjaB-KhQ/exec";
 
 	
+
 $(document).ready(function () {
 	
 	 $('input[name="Catogories"]').on('change', updateSelectedCategories);
