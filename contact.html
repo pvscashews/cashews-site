@@ -13,6 +13,33 @@
     <script src="wwwroot/js/jquery-3.2.1.js"></script>
     <script src="wwwroot/js/global.js"></script>
     <link rel="icon" href="wwwroot/images/fav.png" type="image/x-icon" />
+    <style type="text/css">
+        #form-loader-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+        }
+
+        .loader-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .loader-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,132 +88,142 @@
         </div>
     </nav>
     <div class="container body-content">
-        
-<meta name="description" content="Find contact information for PVS cashews, Sales enquiries, Cashew bulk orders and more." />
 
-<!-- <link href="wwwroot/css/font-awesome.min.css" rel="stylesheet" /> -->
-<link href="wwwroot/css/contact.css?v=1" rel="stylesheet" />
-<script src="wwwroot/js/contact.js"></script>
-<!-- <script async defer -->
+        <meta name="description" content="Find contact information for PVS cashews, Sales enquiries, Cashew bulk orders and more." />
+
+        <!-- <link href="wwwroot/css/font-awesome.min.css" rel="stylesheet" /> -->
+        <link href="wwwroot/css/contact.css?v=1" rel="stylesheet" />
+        <script src="wwwroot/js/contact.js"></script>
+        <!-- <script async defer -->
         <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjYJhijD-kqiJw9taour2yBqzL_HmERcU&callback=initMap"> -->
-<!-- </script> -->
-
-<div class="divTable" style="margin-top:50px;">
-
-    <div style="display:table; width:100%; vertical-align:middle">
-        <div class="contactform">
-            <center><h3>Contact us to get best deals</h3></center>
-            <div style="margin-top:25px;">
-<form action="Contact.html" method="post" role="form">                    <ul class="form-style-1">
-                        <li>
-                            <input data-val="true" data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="361590b7-b7c0-4f1d-a6a4-85d798985253" />
-                            <label>Email <span class="required">*</span><span id="val_email" class="validation"> (Enter your Email Id)</span></label>
-                            <input class="field-long" id="email" name="Email" type="email" value="" />
-                        </li>
-                        <li>
-                            <label>Mobile <span class="required">*</span><span id="val_mobile" class="validation"> (Enter your Mobile number)</span></label>
-                            <input class="field-long" id="mobile" name="Mobile" type="text" value="" />
-                        </li>
-                        <li>
-                            <label>Select the catogories you want <span class="required">*</span><span id="val_category" class="validation"> (Select one category)</span></label>
-                           <ul id="double">
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W180" id="Cat_W180" />
-        <label for="Cat_W180" class="checkbox-custom-label">W180</label>
-    </li>
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W240" id="Cat_W240" />
-        <label for="Cat_W240" class="checkbox-custom-label">W240</label>
-    </li>
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="W320" id="Cat_W320" />
-        <label for="Cat_W320" class="checkbox-custom-label">W320</label>
-    </li>
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="SW" id="Cat_SW" />
-        <label for="Cat_SW" class="checkbox-custom-label">SW</label>
-    </li>
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="LW" id="Cat_LW" />
-        <label for="Cat_LW" class="checkbox-custom-label">LW</label>
-    </li>
-    <li>
-        <input type="checkbox" class="checkbox-custom" name="Catogories" value="JW" id="Cat_JW" />
-        <label for="Cat_JW" class="checkbox-custom-label">JW</label>
-    </li>
-
-    <!-- Store the result -->
-    <input type="hidden" id="SelectedCategories" name="SelectedCategories" />
-</ul>
-                        </li>
-                        <li>
-                            <label>Average Quantity <span class="required">*</span><span id="val_quantity" class="validation"> (Enter Quantity you want)</span></label>
-                            <input class="field-long" id="quantity" name="QuantityString" title="Enter numerical value" type="number" value="" />
-                            <select id="unit" name="unit">
-                                <option>Kilograms</option>
-                                <option>Tonnes</option>
-                            </select>
-                        </li>
-                        <li>
-                            <label>Your Message</label>
-                            <textarea class="field-long field-textarea" id="message" name="Message">
-</textarea>
-                        </li>
-                        <li style="text-align:center;">
-                            <input id="submit" type="submit" value="Send" />
-                        </li>
-                    </ul>
-<input name="__RequestVerificationToken" type="hidden" value="CfDJ8JBILna-uuNBprJYJqmlVRwAYmdRefGCifEapYC3KhQVlJBf21EfemFF72bpD7Gjd4sNFBfGqsQ1hKER8TpuUCPelWVovXNSJ9co1tws3202-h4kv1FPieCQZkZubvEbDIiTpPviaHyghfVW5h0xRMs" /><input name="Catogories[0].IsChecked" type="hidden" value="false" /><input name="Catogories[1].IsChecked" type="hidden" value="false" /><input name="Catogories[2].IsChecked" type="hidden" value="false" /><input name="Catogories[3].IsChecked" type="hidden" value="false" /><input name="Catogories[4].IsChecked" type="hidden" value="false" /><input name="Catogories[5].IsChecked" type="hidden" value="false" /></form>            </div>
-        </div>
-        <div class="contactdetails">
-            <div class="horizantal-line"></div>
-            <div class="contactdetailsinner">
-                <div>
-                    <table style="width:100%">
-                        <tr>
-                            <td colspan="2">
-                                <span style="color:#2FA763; font-weight:bold; font-size:30px;">INDIA</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td valign="top">
-                                <h4 style="color:#5f5f5f;">Panruti</h4>
-                                <p class="address">
-                                    47, West Street,<br />
-                                    Kattupalayam Road,<br />
-                                    Kadampuliyur,<br />
-                                    Panruti,<br />
-                                    Cuddalore - 607103
-                                </p>
-                            </td>
-                            <td valign="top" style="border-left:0px solid #acacac;">
-                                <div class="enquiry">
-                                    <h4 style="color:#5f5f5f;">Sales Enquiries:</h4>
-                                    <table>
-                                        <tr>
-                                            <td>Baluraj V</td>
-                                            <td>: <a href="tel:+919080860968">+91-9578943968</a></td>
-                                        </tr>
-                                    </table>
-
-                                    <a href="mailto:info@pvscashews.com">info@pvscashews.com</a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <div id="map">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.886322011104!2d79.54603197513813!3d11.702463241430582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54af5bf0a615d5%3A0xcc093cbcb732c525!2sPVS%20Cashews!5e0!3m2!1sen!2sin!4v1753262057446!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
-				
+        <!-- </script> -->
+        <!-- Loader Overlay -->
+        <div id="form-loader-overlay" style="display:none;">
+            <div class="loader-background"></div>
+            <div class="loader-spinner">
+                <img src="wwwroot/images/loading.gif" style="width:150px; height:150px;" alt="Loading..." />
             </div>
         </div>
+
+        <div class="divTable" style="margin-top:50px;">
+
+            <div style="display:table; width:100%; vertical-align:middle">
+                <div class="contactform">
+                    <center><h3>Contact us to get best deals</h3></center>
+                    <div style="margin-top:25px;">
+                        <form action="Contact.html" method="post" role="form">
+                            <ul class="form-style-1">
+                                <li>
+                                    <input data-val="true" data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="361590b7-b7c0-4f1d-a6a4-85d798985253" />
+                                    <label>Email <span class="required">*</span><span id="val_email" class="validation"> (Enter your Email Id)</span></label>
+                                    <input class="field-long" id="email" name="Email" type="email" value="" />
+                                </li>
+                                <li>
+                                    <label>Mobile <span class="required">*</span><span id="val_mobile" class="validation"> (Enter your Mobile number)</span></label>
+                                    <input class="field-long" id="mobile" name="Mobile" type="text" value="" />
+                                </li>
+                                <li>
+                                    <label>Select the catogories you want <span class="required">*</span><span id="val_category" class="validation"> (Select one category)</span></label>
+                                    <ul id="double">
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="W240" id="Cat_W240" />
+                                            <label for="Cat_W240" class="checkbox-custom-label">W240</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="W320" id="Cat_W320" />
+                                            <label for="Cat_W320" class="checkbox-custom-label">W320</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="JH" id="Cat_JH" />
+                                            <label for="Cat_JH" class="checkbox-custom-label">JH</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="W400" id="Cat_W400" />
+                                            <label for="Cat_W400" class="checkbox-custom-label">W400</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="LWP" id="Cat_LWP" />
+                                            <label for="Cat_LWP" class="checkbox-custom-label">LWP</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="checkbox-custom" name="Catogories" value="SP" id="Cat_SP" />
+                                            <label for="Cat_SP" class="checkbox-custom-label">SP</label>
+                                        </li>
+
+                                        <!-- Store the result -->
+                                        <input type="hidden" id="SelectedCategories" name="SelectedCategories" />
+                                    </ul>
+                                </li>
+                                <li>
+                                    <label>Average Quantity <span class="required">*</span><span id="val_quantity" class="validation"> (Enter Quantity you want)</span></label>
+                                    <input class="field-long" id="quantity" name="QuantityString" title="Enter numerical value" type="number" value="" />
+                                    <select id="unit" name="unit">
+                                        <option>Kilograms</option>
+                                        <option>Tonnes</option>
+                                    </select>
+                                </li>
+                                <li>
+                                    <label>Your Message</label>
+                                    <textarea class="field-long field-textarea" id="message" name="Message">
+</textarea>
+                                </li>
+                                <li style="text-align:center;">
+                                    <input id="submit" type="submit" value="Send" />
+                                </li>
+                            </ul>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JBILna-uuNBprJYJqmlVRwAYmdRefGCifEapYC3KhQVlJBf21EfemFF72bpD7Gjd4sNFBfGqsQ1hKER8TpuUCPelWVovXNSJ9co1tws3202-h4kv1FPieCQZkZubvEbDIiTpPviaHyghfVW5h0xRMs" /><input name="Catogories[0].IsChecked" type="hidden" value="false" /><input name="Catogories[1].IsChecked" type="hidden" value="false" /><input name="Catogories[2].IsChecked" type="hidden" value="false" /><input name="Catogories[3].IsChecked" type="hidden" value="false" /><input name="Catogories[4].IsChecked" type="hidden" value="false" /><input name="Catogories[5].IsChecked" type="hidden" value="false" />
+                        </form>
+                    </div>
+                </div>
+                <div class="contactdetails">
+                    <div class="horizantal-line"></div>
+                    <div class="contactdetailsinner">
+                        <div>
+                            <table style="width:100%">
+                                <tr>
+                                    <td colspan="2">
+                                        <span style="color:#2FA763; font-weight:bold; font-size:30px;">INDIA</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign="top">
+                                        <h4 style="color:#5f5f5f;">Panruti</h4>
+                                        <p class="address">
+                                            47, West Street,<br />
+                                            Kattupalayam Road,<br />
+                                            Kadampuliyur,<br />
+                                            Panruti,<br />
+                                            Cuddalore - 607103
+                                        </p>
+                                    </td>
+                                    <td valign="top" style="border-left:0px solid #acacac;">
+                                        <div class="enquiry">
+                                            <h4 style="color:#5f5f5f;">Sales Enquiries:</h4>
+                                            <table>
+                                                <tr>
+                                                    <td>Baluraj V</td>
+                                                    <td>: <a href="tel:+919080860968">+91-9578943968</a></td>
+                                                </tr>
+                                            </table>
+
+                                            <a href="mailto:info@pvscashews.com">info@pvscashews.com</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3906.886322011104!2d79.54603197513813!3d11.702463241430582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54af5bf0a615d5%3A0xcc093cbcb732c525!2sPVS%20Cashews!5e0!3m2!1sen!2sin!4v1753262057446!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <center><p class="footer">© 2025, PVS Cashews Pvt. Ltd. All Rights Reserved.</p></center>
+        </div>
+
     </div>
 
-    <center><p class="footer">© 2025, PVS Cashews Pvt. Ltd. All Rights Reserved.</p></center>
-</div>
-
-    </div>
-    
 </body>
 </html>
