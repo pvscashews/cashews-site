@@ -39,7 +39,7 @@
 }
 
 .divproduct {
-    height: 330px;
+    height: 345px;
     width: 25%;
     float: left;
     cursor: pointer;
@@ -73,8 +73,7 @@
 
 .productdesc {
     font-family: Roboto, Arial, sans-serif !important;
-    color: #4f4e4e;
-    font-size: 14px !important;
+    font-size: 19px !important;
     max-height: 53px;
     margin-top: 15px;
     overflow: hidden;
@@ -84,12 +83,12 @@
     overflow: hidden;
     font-size: 13px;
     text-align: left;
-    height:45px;
+    height: 55px;
 }
 
 .quantity {
     color: #878787;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: -5px;
     word-wrap: break-word;
 }
@@ -97,10 +96,8 @@
 .productprice {
     margin-top: -3px;
     display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    color: #212121;
-    margin-left: 5px;
+    font-size: 28px;
+    color: #6811AF;
 }
 
 .negotiable {
@@ -111,10 +108,20 @@
 }
 
 .mrp {
-    text-decoration: line-through;
     display: inline-block;
     font-size: 14px;
     color: #878787;
+}
+
+.minidesc {
+    display: inline-block;
+    font-size: 14px;
+    color: #878787;
+}
+
+
+.strike {
+    text-decoration: line-through;
 }
 
 .quality-image {
@@ -137,7 +144,7 @@
     }
 
     .divproduct {
-        height: 260px !important;
+        height: 265px !important;
         width: 50% !important;
     }
 
@@ -153,7 +160,7 @@
     }
 
     .productdesc p {
-        font-size: 12px !important;
+        font-size: 19px !important;
         max-height: 30px !important;
         margin-top: 0px !important;
     }

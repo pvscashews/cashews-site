@@ -5,10 +5,10 @@
     var mrp = $.urlParam('mrp'); 
     $('#productimg').attr('src', 'https://www.pvscashews.com/wwwroot/images/products/' + name +'.jpg');
     $('#zoomimage').attr('src', 'https://www.pvscashews.com/wwwroot/images/products/' + name +'.jpg');
-    $('.description').text('Fresh organic whole cashews');
-    $('.quantity').text('1 Kg');
+    $('.description').text('Fresh organic premium whole cashews | ' + name);
+    $('.quantity').text('1 Kg, ' + name);
     $('.mrp').text(mrp);
-    $('.newprice').text(price);
+    $('.newprice').text('₹' + price);
 
     $('.container').show();
 });
