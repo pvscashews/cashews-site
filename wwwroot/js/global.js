@@ -1,4 +1,5 @@
 ﻿var lastScrollTop = 0;
+
 $(document).ready(function () {
     $('.ng-pristine').focusout(function () {
         if ($(this).val() === "") {

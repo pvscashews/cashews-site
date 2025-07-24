@@ -1,8 +1,4 @@
-﻿body {
-    background-color: #ebeaed;
-}
-
-#leftpane {
+﻿#leftpane {
     width: 250px;
     float: left;
     position: relative;
@@ -73,7 +69,7 @@
 
 .productdesc {
     font-family: Roboto, Arial, sans-serif !important;
-    font-size: 19px !important;
+    font-size: 19px;
     max-height: 53px;
     margin-top: 15px;
     overflow: hidden;
@@ -84,6 +80,87 @@
     font-size: 13px;
     text-align: left;
     height: 55px;
+}
+
+    .productdesc p {
+        font-size: 19px;
+        max-height: 30px;
+        margin-top: 0px;
+    }
+
+.rupee {
+    top: -.75em;
+    font-size: 13px;
+    position: relative;
+    line-height: normal;
+}
+
+@media screen and (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .productdesc {
+        font-size: 13px !important;
+        height: auto;
+        max-height: none;
+        -webkit-line-clamp: 3; /* Show more lines on mobile */
+    }
+
+        .productdesc p {
+            font-size: 13px !important;
+            max-height: 30px;
+            margin-top: 0px;
+        }
+
+    .rupee {
+        top: -0.3em !important;
+        font-size: 9px !important;
+        position: relative;
+        line-height: normal;
+    }
+
+    .navbar-collapse {
+        display: block !important;
+        background-color: #fff; /* or any color you want */
+        padding: 10px;
+    }
+        .navbar-collapse.collapse {
+            display: none !important;
+        }
+        .navbar-collapse.in {
+            display: block !important;
+        }
+
+        .navbar-collapse .headerlink span {
+            color: #6811AF; /* make text visible on light bg */
+        }
+    .links a {
+        display: block;
+        padding: 10px 15px;
+        text-align: left;
+        text-decoration: none;
+    }
+
+        .navbar-collapse.show {
+            display: block;
+        }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px;
+        cursor: pointer;
+        padding: 10px;
+        float: right;
+        margin: 10px;
+    }
+
+    .headerlink {
+        display: block;
+        padding: 10px;
+    }
 }
 
 .quantity {
@@ -157,12 +234,6 @@
         padding-top: 4px !important;
         padding-top: 4px !important;
         height: 150px !important;
-    }
-
-    .productdesc p {
-        font-size: 19px !important;
-        max-height: 30px !important;
-        margin-top: 0px !important;
     }
 
     .quantity {
