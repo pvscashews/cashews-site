@@ -1,20 +1,25 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="cashews, cashew nuts, online cashews, cashew manufacturers, cashew dealers, cashew exporters" />
     <meta name="google-site-verification" content="7KSSTtLdzgTeZT13fFdNfhW_ZhwFx5gfXp8-u1maEbM" />
+    <meta name="description" content="Find contact information for PVS cashews, Sales enquiries, Cashew bulk orders and more." />
     <title>PVS Cashews - Contact Us</title>
-    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.css?v=2" />
-    <link rel="stylesheet" href="wwwroot/css/site.css?v=2" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="wwwroot/css/site.css" />
+    <link href="wwwroot/css/home.css" rel="stylesheet" />
     <link href="wwwroot/css/fontFace.css" rel="stylesheet" />
+    <link href="wwwroot/css/contact.css?v=1" rel="stylesheet" />
+
     <script src="wwwroot/js/jquery-3.2.1.js"></script>
     <script src="wwwroot/js/global.js"></script>
-    <link href="wwwroot/css/home.css" rel="stylesheet" />
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="wwwroot/js/contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="icon" href="wwwroot/images/fav.png" type="image/x-icon" />
+
     <style type="text/css">
         #form-loader-overlay {
             position: absolute;
@@ -43,61 +48,41 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="topheader">
-            <div style="float:right; padding-top:5px;vertical-align:middle; visibility:collapse; margin-right:15px; height:100%;">
-                <a class="headerlink topheaderlink" href="/Account/SignIn">Download App</a>
-            </div>
-        </div>
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="productlogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAtUExURf///////////////////////////////////////////////////////////6DSMAUAAAAPdFJOU6i7AozP/j4QVuB19h1mKUtpDdUAAAEnSURBVCgVY3ANjfZSQgIMoUBghCyQe/eWaByyAJBdHYwmoBiCJqAbegghwgBk6oReQhVQcp0oCAUCSSAVSqYguyFgO1ggNdrFxXWKZwiQDAMLaEcqKaU2aYQpKS2NAwsohKaXp16vDSsvn+oEFtCAmRAa2gQWUA/dbMzKbBBgbB2pBBZQAvoGbEZrLFRgacAqU64FwatcJ0EFnsIMWQQV0AzNaV1zKuJgdBFUQDn0EsiMp8BwgBiqETpB1IEl0HUPTEBpK8QQI7iA6BYXIHAuggtchQcrxAyl0yGHgMEAAlAB3dCNoCASgAsoLYWYmgRToaRnwMDAIMCMUKG1+5JSZgDCDKWjoduVXEObECqehoYrTUUWUADG+G1QDEKtVVJ6B4ywJKAAAAQAd3O4FvzpAAAAAElFTkSuQmCC">
-                <a class="navbar-brand logo" href="/">PVS Cashews</a>
+    <nav class="navbar navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="wwwroot/images/logo.png" alt="Logo">
+            </a>
+
+            <!-- Desktop Links (visible from md and up) -->
+            <div class="d-none d-md-flex ms-auto">
+                <a class="nav-link text-primary me-3" href="index.html">Home</a>
+                <a class="nav-link text-primary me-3" href="contact.html">Contact</a>
+                <a class="nav-link text-primary" href="about.html">About Us</a>
             </div>
 
-            <div class="navbar-collapse collapse" style="float:right; margin-right:15px; height:100%;">
-                <div class="links">
-                    <a class="headerlink" href="index.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
-                            <center>
-                                <span style="margin-left:10px;">Home</span>
-                            </center>
-                        </div>
-                    </a>
-                    <a class="headerlink" href="contact.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
-                            <center>
-                                <span style="margin-left:10px;">Contact</span>
-                            </center>
-                        </div>
-                    </a>
-                    <a class="headerlink" href="about.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px;vertical-align:middle;height:50px;">
-                            <center>
-                                <span style="margin-left:10px;">About Us</span>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <!-- Hamburger Button (visible only on small screens) -->
+            <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
-    <div class="container body-content">
 
-        <meta name="description" content="Find contact information for PVS cashews, Sales enquiries, Cashew bulk orders and more." />
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="background-color: #169e04;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <a class="nav-link text-white" href="index.html">Home</a>
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+            <a class="nav-link text-white" href="about.html">About Us</a>
+        </div>
+    </div>
 
-        <!-- <link href="wwwroot/css/font-awesome.min.css" rel="stylesheet" /> -->
-        <link href="wwwroot/css/contact.css?v=1" rel="stylesheet" />
-        <script src="wwwroot/js/contact.js"></script>
-        <!-- <script async defer -->
-        <!-- src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjYJhijD-kqiJw9taour2yBqzL_HmERcU&callback=initMap"> -->
-        <!-- </script> -->
+    <div class="container body-content pt-5">
         <!-- Loader Overlay -->
         <div id="form-loader-overlay" style="display:none;">
             <div class="loader-background"></div>
@@ -107,7 +92,6 @@
         </div>
 
         <div class="divTable" style="margin-top:50px;">
-
             <div style="display:table; width:100%; vertical-align:middle">
                 <div class="contactform">
                     <center><h3>Contact us to get best deals</h3></center>
@@ -165,14 +149,12 @@
                                 </li>
                                 <li>
                                     <label>Your Message</label>
-                                    <textarea class="field-long field-textarea" id="message" name="Message">
-</textarea>
+                                    <textarea class="field-long field-textarea" id="message" name="Message"></textarea>
                                 </li>
                                 <li style="text-align:center;">
                                     <input id="submit" type="submit" value="Send" />
                                 </li>
                             </ul>
-                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8JBILna-uuNBprJYJqmlVRwAYmdRefGCifEapYC3KhQVlJBf21EfemFF72bpD7Gjd4sNFBfGqsQ1hKER8TpuUCPelWVovXNSJ9co1tws3202-h4kv1FPieCQZkZubvEbDIiTpPviaHyghfVW5h0xRMs" /><input name="Catogories[0].IsChecked" type="hidden" value="false" /><input name="Catogories[1].IsChecked" type="hidden" value="false" /><input name="Catogories[2].IsChecked" type="hidden" value="false" /><input name="Catogories[3].IsChecked" type="hidden" value="false" /><input name="Catogories[4].IsChecked" type="hidden" value="false" /><input name="Catogories[5].IsChecked" type="hidden" value="false" />
                         </form>
                     </div>
                 </div>
@@ -220,11 +202,8 @@
                     </div>
                 </div>
             </div>
-
             <center><p class="footer">© 2025, PVS Cashews Pvt. Ltd. All Rights Reserved.</p></center>
         </div>
-
     </div>
-
 </body>
 </html>

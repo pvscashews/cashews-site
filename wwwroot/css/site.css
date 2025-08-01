@@ -7,11 +7,32 @@ body {
     display: none;
 }
 
-.body-content {
-    /*padding-left: 15px;*/
-    /*padding-right: 15px;*/
+#nav-placeholder {
+    height:43px;
 }
 
+.navbar-brand img {
+    height: 40px;
+}
+
+.offcanvas-start {
+    width: 250px;
+}
+
+.offcanvas-body a {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.bg-lightgreen {
+    background-color: #6DBF4B !important; /* soft light green */
+}
+
+       
+.offcanvas a.nav-link:hover {
+    text-decoration: underline;
+    font-weight: 500;
+}
 .headerlink {
     width: 100px;
     height: 50px;
@@ -25,7 +46,7 @@ body {
 }
 
 .cart:hover {
-    background: #802cc4;
+    /*background: #802cc4;*/
 }
 /* Carousel */
 .carousel-caption p {
@@ -60,7 +81,7 @@ a {
 .signupstyle {
     font-family: HelveticaNeueW01-Thin,HelveticaNeueW02-Thin,HelveticaNeueW10-35Thin,sans-serif;
     font-size: 56px;
-    color: #590B98;
+    color: #00830f;
 }
 
 .already-user {
@@ -205,7 +226,7 @@ md-input-container {
     padding-top: 8px;
     padding-bottom: 14px;
     line-height: 1.5;
-    background: #590B98;
+    background: #00830f;
 }
 
 .wix-button, .wix-button-danger, .wix-button-emphasize, .wix-button-invert, .wix-button-invert-light, .wix-button-market, .wix-button-premium, .wix-button-transparent {
@@ -229,18 +250,18 @@ md-input-container {
 
     .wix-button.is-button-outline {
         background-color: #fff;
-        color: #590B98;
-        box-shadow: inset 0 0 0 1px #590B98;
+        color: #00830f;
+        box-shadow: inset 0 0 0 1px #00830f;
     }
 
     .wix-button:hover {
-        background-color: #7024ad;
-        border-color: #7024ad;
+        background-color: #00830f;
+        border-color: #00830f;
         color: #ffffff;
     }
 
     .wix-button:active:hover {
-        background-color: #7024ad !important;
+        background-color: #00830f !important;
     }
 
 
@@ -251,17 +272,20 @@ md-input-container {
 .links {
     display: table;
     vertical-align: middle;
+    float:right;
+    margin-top:10px;
 }
 
 .productlogo {
     float: left;
-    margin-top: 8px;
+    /*margin-top: 8px;
     margin-left: 15px;
-    margin-right: 5px;
+    margin-right: 5px;*/
+    width:25%;
 }
 
 .logo {
-    color: #f2f0f4 !important;
+    color: #00830f !important;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 

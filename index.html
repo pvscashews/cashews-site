@@ -7,68 +7,61 @@
     <meta name="description" content="Buy Cashew nuts like graded cashews, raw cashews, non-peeled cashews manufactured in India. Find the fine quality white colored cashews with reasonable price. Trusted brand since 1995. We are exporting the quality cashews all over the India." />
     <title>Cashew Manufacturers | Cashew Exporters | Cashew Dealers | Wholesale Price</title>
 
-    <script src="wwwroot/js/jquery-3.2.1.js"></script>
-    <link rel="stylesheet" href="wwwroot/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="wwwroot/css/site.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="wwwroot/css/site.css" rel="stylesheet" />
+    <link href="wwwroot/css/home.css" rel="stylesheet" />
     <link href="wwwroot/css/fontFace.css" rel="stylesheet" />
-    <script src="wwwroot/js/global.js"></script>
     <link rel="icon" href="wwwroot/images/fav.png" type="image/x-icon" />
+
+    <script src="wwwroot/js/jquery-3.2.1.js"></script>
+    <script src="wwwroot/js/global.js"></script>
+
     <script src="wwwroot/sliderengine/jquery.js"></script>
     <script src="wwwroot/sliderengine/amazingslider.js"></script>
     <link href="wwwroot/sliderengine/amazingslider-1.css?v=1" rel="stylesheet" type="text/css">
-    <link href="wwwroot/css/home.css" rel="stylesheet" />
     <script src="wwwroot/sliderengine/initslider-1.js"></script>
     <!-- Bootstrap JS bundle (includes Popper.js) -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="topheader">
-            <div style="float:right; padding-top:5px;vertical-align:middle; visibility:collapse; margin-right:15px; height:100%;">
-                <a class="headerlink topheaderlink" href="/Account/SignIn">Download App</a>
-            </div>
-        </div>
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <img class="productlogo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgBAMAAACBVGfHAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAtUExURf///////////////////////////////////////////////////////////6DSMAUAAAAPdFJOU6i7AozP/j4QVuB19h1mKUtpDdUAAAEnSURBVCgVY3ANjfZSQgIMoUBghCyQe/eWaByyAJBdHYwmoBiCJqAbegghwgBk6oReQhVQcp0oCAUCSSAVSqYguyFgO1ggNdrFxXWKZwiQDAMLaEcqKaU2aYQpKS2NAwsohKaXp16vDSsvn+oEFtCAmRAa2gQWUA/dbMzKbBBgbB2pBBZQAvoGbEZrLFRgacAqU64FwatcJ0EFnsIMWQQV0AzNaV1zKuJgdBFUQDn0EsiMp8BwgBiqETpB1IEl0HUPTEBpK8QQI7iA6BYXIHAuggtchQcrxAyl0yGHgMEAAlAB3dCNoCASgAsoLYWYmgRToaRnwMDAIMCMUKG1+5JSZgDCDKWjoduVXEObECqehoYrTUUWUADG+G1QDEKtVVJ6B4ywJKAAAAQAd3O4FvzpAAAAAElFTkSuQmCC">
-                <a class="navbar-brand logo" href="/">PVS Cashews</a>
+    <nav class="navbar navbar-light bg-white shadow-sm fixed-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="/">
+                <img src="wwwroot/images/logo.png" alt="Logo">
+            </a>
+
+            <!-- Desktop Links (visible from md and up) -->
+            <div class="d-none d-md-flex ms-auto">
+                <a class="nav-link text-primary me-3" href="index.html">Home</a>
+                <a class="nav-link text-primary me-3" href="contact.html">Contact</a>
+                <a class="nav-link text-primary" href="about.html">About Us</a>
             </div>
 
-            <div class="navbar-collapse collapse" id="nav-menu" style="float:right; margin-right:15px; height:100%;">
-                <div class="links">
-                    <a class="headerlink" href="index.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
-                            <center>
-                                <span style="margin-left:10px;">Home</span>
-                            </center>
-                        </div>
-                    </a>
-                    <a class="headerlink" href="contact.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px; vertical-align:middle; height:50px; margin-right:20px;">
-                            <center>
-                                <span style="margin-left:10px;">Contact</span>
-                            </center>
-                        </div>
-                    </a>
-                    <a class="headerlink" href="about.html">
-                        <div class="cart headertext" style="display:table-cell;width:100px;vertical-align:middle;height:50px;">
-                            <center>
-                                <span style="margin-left:10px;">About Us</span>
-                            </center>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <!-- Hamburger Button (visible only on small screens) -->
+            <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
-    <div class="container body-content">
+
+    <!-- Offcanvas Mobile Menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel" style="background-color: #169e04;">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="mobileMenuLabel">Menu</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <a class="nav-link text-white" href="index.html">Home</a>
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+            <a class="nav-link text-white" href="about.html">About Us</a>
+        </div>
+    </div>
+
+    <div class="container body-content pt-5">
         <table style="width:100%;">
             <tr>
                 <td align="center" valign="middle" style="width:25%;">
@@ -106,14 +99,8 @@
         </table>
 
         <div>
-            <div id="leftpane" class="visibledevice">
-                <div id="innerleft">
-                    <img style="margin-left:10px;" width="200" src="wwwroot/images/ad1.jpg" />
-                </div>
-            </div>
             <div id="rightpane">
                 <div id="innerright">
-
                     <div class="divproduct" id="W240">
                         <div class="productimage">
                             <img class="picture" src="wwwroot/images/products/W240.jpg" />
@@ -147,6 +134,9 @@
                             </div>
                         </div>
                     </div>
+
+
+
                     <div class="divproduct" id="W320">
                         <div class="productimage">
                             <img class="picture" src="wwwroot/images/products/W320.jpg" />
@@ -180,6 +170,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="divproduct" id="JH">
                         <div class="productimage">
                             <img class="picture" src="wwwroot/images/products/JH.jpg" />

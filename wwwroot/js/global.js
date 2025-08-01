@@ -1,6 +1,7 @@
 ﻿var lastScrollTop = 0;
 
 $(document).ready(function () {
+
     $('.ng-pristine').focusout(function () {
         if ($(this).val() === "") {
             $(this).parent().removeClass("md-input-focused");

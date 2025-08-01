@@ -29,18 +29,21 @@
     height: auto;
     border: 1px solid #e8e8e8;
     min-height: 500px;
-    background-color: #fff;
+    background-color: #f1f3f6;
     padding: 10px;
     overflow: auto;
 }
 
 .divproduct {
-    height: 345px;
-    width: 25%;
+    height: 370px;
+    width: 24%;
     float: left;
     cursor: pointer;
     transition: box-shadow .2s ease;
-    border: 1px solid transparent;
+    border: 1.33px solid #f2f0f0;
+    background: #fff;
+    margin:5px;
+    padding:5px;
 }
 
     .divproduct:hover {
@@ -107,6 +110,10 @@
         height: auto;
         max-height: none;
         -webkit-line-clamp: 3; /* Show more lines on mobile */
+    }
+
+    #innerright {
+        padding: 0px !important;
     }
 
         .productdesc p {
@@ -221,8 +228,8 @@
     }
 
     .divproduct {
-        height: 265px !important;
-        width: 50% !important;
+        height: 300px !important;
+        width: 47% !important;
     }
 
     .picture {
