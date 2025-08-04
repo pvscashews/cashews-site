@@ -1,0 +1,62 @@
+[
+  {
+    "id": "W240",
+    "name": "W240",
+    "image": "wwwroot/images/products/W240.jpg",
+    "description": "Fresh organic premium whole cashews | W240",
+    "quantity": "1 Kg, W240",
+    "price": 830,
+    "pricePer100g": 83,
+    "mrp": 950
+  },
+  {
+    "id": "W320",
+    "name": "W320",
+    "image": "wwwroot/images/products/W320.jpg",
+    "description": "Fresh organic premium whole cashews | W320",
+    "quantity": "1 Kg, W320",
+    "price": 740,
+    "pricePer100g": 74,
+    "mrp": 810
+  },
+  {
+    "id": "JH",
+    "name": "JH",
+    "image": "wwwroot/images/products/JH.jpg",
+    "description": "Fresh organic premium whole cashews | JH",
+    "quantity": "1 Kg, JH",
+    "price": 730,
+    "pricePer100g": 73,
+    "mrp": 795
+  },
+  {
+    "id": "W400",
+    "name": "W400",
+    "image": "wwwroot/images/products/W400.jpg",
+    "description": "Fresh organic premium whole cashews | W400",
+    "quantity": "1 Kg, W400",
+    "price": 700,
+    "pricePer100g": 70,
+    "mrp": 799
+  },
+  {
+    "id": "LWP",
+    "name": "LWP",
+    "image": "wwwroot/images/products/LWP.jpg",
+    "description": "Fresh organic premium whole cashews | LWP",
+    "quantity": "1 Kg, LWP",
+    "price": 690,
+    "pricePer100g": 69,
+    "mrp": 730
+  },
+  {
+    "id": "SP",
+    "name": "SP",
+    "image": "wwwroot/images/products/SP.jpg",
+    "description": "Fresh organic premium whole cashews | SP",
+    "quantity": "1 Kg, SP",
+    "price": 600,
+    "pricePer100g": 60,
+    "mrp": 690
+  }
+]
