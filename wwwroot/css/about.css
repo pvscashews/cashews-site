@@ -36,7 +36,7 @@
         display: flex;
     }
 
-.lightbox-image {
+.lightbox-media {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
@@ -88,3 +88,22 @@
     }
 }
 
+.find-us-block {
+    background-color: #f8f9fa; /* Matches your site's light gray background */
+    color: #333; /* Standard readable dark text */
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.find-us-block h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #212529;
+}
+
+.find-us-block p {
+    font-size: 16px;
+    margin: 8px 0;
+}

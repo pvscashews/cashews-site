@@ -73,85 +73,123 @@
         <div class="photo-gallery">
             <a href="wwwroot/images/company/1.jpg" class="lightbox"><img src="wwwroot/images/company/1.jpg" alt="Cashew Processing 1" /></a>
             <a href="wwwroot/images/company/2.jpg" class="lightbox"><img src="wwwroot/images/company/2.jpg" alt="Cashew Processing 2" /></a>
-            <a href="wwwroot/images/company/3.jpg" class="lightbox"><img src="wwwroot/images/company/3.jpg" alt="Cashew Processing 3" /></a>
+            <a href="wwwroot/images/company/3.mp4" class="lightbox"><img src="wwwroot/images/company/3-thumbnail-play.jpg" alt="Cashew Processing 3" /></a>
             <a href="wwwroot/images/company/4.jpg" class="lightbox"><img src="wwwroot/images/company/4.jpg" alt="Cashew Processing 4" /></a>
             <a href="wwwroot/images/company/5.jpg" class="lightbox"><img src="wwwroot/images/company/5.jpg" alt="Cashew Processing 5" /></a>
             <a href="wwwroot/images/company/6.jpg" class="lightbox"><img src="wwwroot/images/company/6.jpg" alt="Cashew Processing 6" /></a>
+            <a href="wwwroot/images/company/7.jpg" class="lightbox"><img src="wwwroot/images/company/7.jpg" alt="Cashew Processing 7" /></a>
+            <a href="wwwroot/images/company/8.jpg" class="lightbox"><img src="wwwroot/images/company/8.jpg" alt="Cashew Processing 8" /></a>
+            <a href="wwwroot/images/company/9.jpg" class="lightbox"><img src="wwwroot/images/company/9.jpg" alt="Cashew Processing 9" /></a>
         </div>
         <!-- Lightbox Modal with Navigation -->
         <div id="lightbox-modal" class="lightbox-modal">
             <button class="lightbox-prev" onclick="showPrev()">&#10094;</button>
-            <img id="lightbox-img" class="lightbox-image" src="" alt="Enlarged View" />
+
+            <!-- Image View -->
+            <img id="lightbox-img" class="lightbox-media" src="" alt="Enlarged View" style="display:none;" />
+
+            <!-- Video View -->
+            <video id="lightbox-video" class="lightbox-media" controls style="display:none;">
+                <source src="" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
             <button class="lightbox-next" onclick="showNext()">&#10095;</button>
             <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         </div>
 
 
+
     </div>
+
+    <section class="find-us-block">
+        <div style="background-color: #f5f7fa; padding: 30px;">
+            <h2 style="text-align: center; color: #1c1c1c;">How to Find Us</h2>
+
+            <div style="display: inline-block; text-align: left; font-size: 16px;">
+                <div style="display: flex; margin-bottom: 10px;">
+                    <strong style="width: 80px;">Address:</strong>
+                    <span>
+                        47, West Street, Kattupalayam Road, Kadampuliyur, Panruti, Cuddalore - 607103
+                    </span>
+                </div>
+                <div style="display: flex; margin-bottom: 10px;">
+                    <strong style="width: 80px;">Phone:</strong>
+                    <span><a href="tel:+919080860968">+91 95789 43968</a></span>
+                </div>
+
+                <div style="display: flex;">
+                    <strong style="width: 80px;">Email:</strong>
+                    <span>info@pvscashews.com</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
     <script>
         const modal = document.getElementById("lightbox-modal");
-        const modalImg = document.getElementById("lightbox-img");
-        const lightboxLinks = document.querySelectorAll(".lightbox");
+        const imgElement = document.getElementById("lightbox-img");
+        const videoElement = document.getElementById("lightbox-video");
+        const videoSource = videoElement.querySelector("source");
 
+        const lightboxLinks = document.querySelectorAll(".lightbox");
+        const mediaList = Array.from(lightboxLinks).map(link => link.href);
         let currentIndex = 0;
-        const imageList = Array.from(lightboxLinks).map(link => link.href);
 
         lightboxLinks.forEach((link, index) => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
                 currentIndex = index;
-                openLightbox(imageList[currentIndex]);
+                openLightbox(mediaList[currentIndex]);
             });
         });
 
         function openLightbox(src) {
-            modalImg.src = src;
             modal.classList.add("active");
+
+            // Reset visibility
+            imgElement.style.display = "none";
+            videoElement.style.display = "none";
+            videoElement.pause();
+
+            if (src.endsWith(".mp4")) {
+                videoSource.src = src;
+                videoElement.load();
+                videoElement.style.display = "block";
+            } else {
+                imgElement.src = src;
+                imgElement.style.display = "block";
+            }
         }
 
         function closeLightbox() {
             modal.classList.remove("active");
-            modalImg.src = "";
+            imgElement.src = "";
+            videoElement.pause();
+            videoSource.src = "";
+            videoElement.load();
         }
 
         function showNext() {
-            currentIndex = (currentIndex + 1) % imageList.length;
-            openLightbox(imageList[currentIndex]);
+            currentIndex = (currentIndex + 1) % mediaList.length;
+            openLightbox(mediaList[currentIndex]);
         }
 
         function showPrev() {
-            currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
-            openLightbox(imageList[currentIndex]);
+            currentIndex = (currentIndex - 1 + mediaList.length) % mediaList.length;
+            openLightbox(mediaList[currentIndex]);
         }
 
-        // Optional: Close modal on clicking outside the image
+        // Optional: close on click outside
         modal.addEventListener("click", function (e) {
-            if (e.target === modal || e.target.classList.contains("lightbox-image")) {
+            if (e.target === modal) {
                 closeLightbox();
             }
         });
-
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        modal.addEventListener("touchstart", function (e) {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        modal.addEventListener("touchend", function (e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-        });
-
-        function handleSwipe() {
-            if (touchEndX < touchStartX - 50) {
-                showNext(); // swipe left
-            }
-            if (touchEndX > touchStartX + 50) {
-                showPrev(); // swipe right
-            }
-        }
     </script>
+
 
 
 </body>
