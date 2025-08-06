@@ -12,7 +12,7 @@
 }
 
 h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: var(--bs-body-font-family);
     color: #525252;
     font-size: 18px;
 }
@@ -89,14 +89,14 @@ h3 {
     }
 
     .form-style-1 input[type=submit], .form-style-1 input[type=button] {
-        background: #6811AF;
+        background: #2FA763;
         padding: 8px 15px 8px 15px;
         border: none;
         color: #fff;
     }
 
         .form-style-1 input[type=submit]:hover, .form-style-1 input[type=button]:hover {
-            background: #7636ab;
+            background: #49ba7a;
             box-shadow: none;
             -moz-box-shadow: none;
             -webkit-box-shadow: none;
