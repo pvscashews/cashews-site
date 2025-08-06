@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="wwwroot/css/site.css" />
     <link href="wwwroot/css/home.css" rel="stylesheet" />
     <link href="wwwroot/css/fontFace.css" rel="stylesheet" />
+    <link href="wwwroot/css/about.css" rel="stylesheet" />
 
     <script src="wwwroot/js/jquery-3.2.1.js"></script>
     <script src="wwwroot/js/global.js"></script>
@@ -55,7 +56,7 @@
 
     <div class="container body-content pt-5">
         <meta name="description" content="We provide fine quality cashews of various categories with good price. We are one of the most trusted firms in the industry engaged in exporting, and supplying a healthy range of Dried Cashew Nuts." />
-        <div style="padding:40px;">
+        <div style="padding-top:40px;">
             <h2>About Us</h2>
             <br />
             <p>
@@ -67,7 +68,91 @@
                 Whether you are a wholesaler, retailer, or end customer, PVS Cashews ensures unmatched quality, freshness, and service — every time.
             </p>
         </div>
+
+        <h3 class="mt-5 mb-3">Our Infrastructure</h3>
+        <div class="photo-gallery">
+            <a href="wwwroot/images/company/1.jpg" class="lightbox"><img src="wwwroot/images/company/1.jpg" alt="Cashew Processing 1" /></a>
+            <a href="wwwroot/images/company/2.jpg" class="lightbox"><img src="wwwroot/images/company/2.jpg" alt="Cashew Processing 2" /></a>
+            <a href="wwwroot/images/company/3.jpg" class="lightbox"><img src="wwwroot/images/company/3.jpg" alt="Cashew Processing 3" /></a>
+            <a href="wwwroot/images/company/4.jpg" class="lightbox"><img src="wwwroot/images/company/4.jpg" alt="Cashew Processing 4" /></a>
+            <a href="wwwroot/images/company/5.jpg" class="lightbox"><img src="wwwroot/images/company/5.jpg" alt="Cashew Processing 5" /></a>
+            <a href="wwwroot/images/company/6.jpg" class="lightbox"><img src="wwwroot/images/company/6.jpg" alt="Cashew Processing 6" /></a>
+        </div>
+        <!-- Lightbox Modal with Navigation -->
+        <div id="lightbox-modal" class="lightbox-modal">
+            <button class="lightbox-prev" onclick="showPrev()">&#10094;</button>
+            <img id="lightbox-img" class="lightbox-image" src="" alt="Enlarged View" />
+            <button class="lightbox-next" onclick="showNext()">&#10095;</button>
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        </div>
+
+
     </div>
+    <script>
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+        const lightboxLinks = document.querySelectorAll(".lightbox");
+
+        let currentIndex = 0;
+        const imageList = Array.from(lightboxLinks).map(link => link.href);
+
+        lightboxLinks.forEach((link, index) => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                currentIndex = index;
+                openLightbox(imageList[currentIndex]);
+            });
+        });
+
+        function openLightbox(src) {
+            modalImg.src = src;
+            modal.classList.add("active");
+        }
+
+        function closeLightbox() {
+            modal.classList.remove("active");
+            modalImg.src = "";
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % imageList.length;
+            openLightbox(imageList[currentIndex]);
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + imageList.length) % imageList.length;
+            openLightbox(imageList[currentIndex]);
+        }
+
+        // Optional: Close modal on clicking outside the image
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal || e.target.classList.contains("lightbox-image")) {
+                closeLightbox();
+            }
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        modal.addEventListener("touchstart", function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        modal.addEventListener("touchend", function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                showNext(); // swipe left
+            }
+            if (touchEndX > touchStartX + 50) {
+                showPrev(); // swipe right
+            }
+        }
+    </script>
+
 
 </body>
-</html >
+</html>
